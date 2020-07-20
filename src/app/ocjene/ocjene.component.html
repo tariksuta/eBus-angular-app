@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-12">
+        <app-ocjena-item
+        *ngFor="let kompanijaEl of listaKompanija"
+        [kompanija]="kompanijaEl"></app-ocjena-item>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <app-ocjene-final
+        *ngFor="let kompanijaEl of listaKompanija"
+        [kompanija]="kompanijaEl"></app-ocjene-final>
+    </div>
+</div>

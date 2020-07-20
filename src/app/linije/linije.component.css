@@ -1,0 +1,30 @@
+
+.blok{
+    display: block;
+}
+.cleanSpace{
+    margin-bottom: 35px;
+}
+.zaPretragu{
+    list-style-type: none;
+    cursor: pointer;
+    position: absolute;
+    width: 90%;
+    
+    background-color: lightgray;
+}
+
+.pretrazi{
+    margin-top: 40px;
+}
+
+.razmak{
+    margin-bottom: 100px;
+}
+
+#tabelaLinija{
+   
+    overflow: hidden;
+    margin-top: 10px;
+   
+}

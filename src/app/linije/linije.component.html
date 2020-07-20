@@ -1,0 +1,84 @@
+
+
+<div class="row cleanSpace">
+    
+    <div class="col-md-4" >
+        <div >
+            <p>Polaziste</p>
+            <input type="text" class="form-control" id="polaziste" [(ngModel)]="nazivPolazista" (keyup)="onKeyPolaziste($event)" >
+            <ul *ngIf="poPolazistu" class="zaPretragu">
+                <li *ngFor="let grad of gradovi" (click)="onMoveToSearchPolaziste(grad.naziv)">{{grad.naziv}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-2" style="text-align: center;">
+        
+        <input type="image" src="../../assets/images/reverse.png" class="img-responsive" style="width: 50px;margin-top: 20px;"
+        (click)="zamjeniGradove()">
+    </div>
+       <div class="col-md-4">
+        <div >
+            <p >Odredište</p>
+            <input type="text" class="form-control" id="odediste" [(ngModel)]="nazivOdredista" (keyup)="onKeyOdrediste($event)">
+            <ul *ngIf="poOdredistu"  class="zaPretragu">
+                <li *ngFor="let grad of gradovi" (click)="onMoveToSearchOdrediste(grad.naziv)">{{grad.naziv}}</li>
+            </ul>
+        </div>
+       </div>
+        
+       <div class="col-md-2">
+        
+           <button class="btn btn-success pretrazi" (click)="prikaziLinije()">Pretrazi</button>
+       </div>
+       
+  
+</div>
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <label>Datum pretrage:</label>
+       <input type="date" [(ngModel)]="datumPretage">
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table" id="tabelaLinija" *ngIf="isTable">
+            <thead style="background-color: lightblue;">
+              <tr>
+                <th>Polaziste</th>
+                <th>Odrediste</th>
+                <th>Vrijeme polaska</th>
+                <th>Kompanija</th>
+                <th>Cijena</th>
+                <th>Detalji</th>
+              </tr>
+            </thead>
+            <tbody>
+               
+              <tr *ngFor="let linija of linijeZaPretragu">
+                
+                <td>{{linija.polaziste}}</td>
+                  <td>{{linija.odrediste}}</td>
+                  <td>{{ linija.vrijemePolaska}}</td>
+                  <td>{{linija.kompanija}}</td>
+                  <td>{{ linija.cijena}} KM</td>
+                <td><button class="btn btn-secondary" [disabled]="!prijavljen" (click)="prebaciPretragu(linija)">Prikaz</button></td>
+                
+              </tr>
+         
+            </tbody>
+          </table>
+    </div>
+</div>
+<div class="row" *ngIf="isIzabran">
+    <div class="col-md-12">
+        <app-linije-detalji [izabranaLinija]="linijaPretrage"
+        
+        (exit)="onClose($event)">
+
+        </app-linije-detalji>
+    </div>
+</div>
+

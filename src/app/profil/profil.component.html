@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-8">
+        
+            
+          <div class="float-left" >
+            <label>Ime :</label>
+            <h3>{{putnik.ime}}</h3>
+            <label>Email :</label>
+            <h3>{{putnik.email}}</h3>
+          </div>
+        
+       <div class="float-right" >
+        <label>Prezime :</label>
+        <h3>{{putnik.prezime}}</h3>
+        <label>Datum registracije :</label>
+        <h3>{{putnik.datumRegistracije | date}}</h3>
+       </div>
+        
+       
+       
+        
+    </div>
+    <div class="col-md-4" style="text-align: center;">
+        <img [src]="'data:image/jpeg;base64,'+putnik.slika" class="img-responsive" />
+        <label>Korisničko ime</label>
+        <h5>{{putnik.korisnickoIme}}</h5>
+    </div>
+</div>

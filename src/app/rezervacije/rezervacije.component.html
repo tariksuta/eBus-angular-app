@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-md-5 ograniciBox">
+        <app-rezervacije-item
+          
+          *ngFor="let rezervacijaEl of putnikRezervacije; let  i = index"
+          [rezervacija]="rezervacijaEl"
+          [index]="i"></app-rezervacije-item>
+    </div>
+    <div class="col-md-7">
+        <router-outlet></router-outlet>
+    </div>
+</div>

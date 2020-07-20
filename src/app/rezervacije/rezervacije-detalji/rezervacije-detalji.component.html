@@ -1,0 +1,5 @@
+<div class="qrCodeBox" *ngIf="qrCode">
+    <qrcode [qrdata]="qrCode" [width]="400" [errorCorrectionLevel]="'L'" [elementType]="'canvas'"></qrcode>
+    <button class="btn  btn-danger" (click)="otkaziRezervaciju()">OTKAZI</button>
+</div>
+

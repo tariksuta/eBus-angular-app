@@ -1,0 +1,24 @@
+img{
+    width: 150px;
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 10px;
+}
+label{
+    color: teal;
+    text-transform: uppercase;
+}
+.col-md-8{
+    padding-top: 30px;
+}
+.col-md-4{
+    border-left: 2px solid white;
+}
+.row{
+    background-color: lightgrey;
+    margin-bottom: 150px;
+    padding: 5px;
+}

@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <a class="navbar-brand" href="#">eBus</a>
+    <ul class="navbar-nav classCenter">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/notifikacije">Novosti</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/linije">Linije</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/rezervacije">Rezervacije</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/ocjene">Ocjene</a>
+      </li>
+    </ul>
+    <ul class="float-right">
+     
+       
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{{ isLoged ? 'Odjavi se' : 'Prijavi se'}}</a>
+          <div class="dropdown-menu">
+             <a class="nav-link" *ngIf="!isLoged"  routerLink="/auth">Login</a>
+            <a class="nav-link" style="cursor: pointer;" *ngIf="isLoged" (click)="logout()">Logout</a>
+            <a class="nav-link" style="cursor: pointer;" *ngIf="isLoged" routerLink="/profil" >Profil</a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>

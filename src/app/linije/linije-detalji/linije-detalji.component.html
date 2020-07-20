@@ -1,0 +1,70 @@
+<div class="razmak"></div>
+<div ><button class="btn btn-danger kockaX" (click)="exitPregled()">X</button></div>
+<div class="row" >
+   
+    <div class="col-md-2">
+        <p class="urediTekst">POLAZIŠTE :</p>
+    </div>
+    <div class="col-md-4">
+        <h3>{{izabranaLinija.polaziste}}</h3>
+    </div>
+    <div class="col-md-2">
+        <p class="urediTekst">ODREDIŠTE :</p>
+    </div>
+    <div class="col-md-4">
+
+        <h3>{{izabranaLinija.odrediste}}</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        <p class="urediTekst">Vrijeme polaska :</p>
+    </div>
+    <div class="col-md-4">
+        <p>{{izabranaLinija.vrijemePolaska}}</p>
+    </div>
+    <div class="col-md-2">
+        <p class="urediTekst">Vrijeme dolaska :</p>
+    </div>
+    <div class="col-md-4">
+        <p>{{izabranaLinija.vrijemeDolaska}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        <p class="urediTekst">Naziv kompanije :</p>
+    </div>
+    <div class="col-md-4">
+        <h3>{{izabranaLinija.kompanija}}</h3>
+    </div>
+    <div class="col-md-2">
+        <p class="urediTekst">Vozilo :</p>
+    </div>
+    <div class="col-md-4">
+        <h3>{{izabranaLinija.vozilo.model}}</h3>
+    </div>
+</div>
+<div class="row">
+    <button (click)="getSjedistaByVoziloId()" class="btn btn-success">Prikazi sjedista</button>
+    
+</div>
+<div class="row">
+    
+    <div class="col-md-4 ">
+        <div class="slobodno">
+          <p>SLOBODNO</p>
+        </div>
+        <div class="zauzeto">
+            <p>ZAUZETO</p>
+         </div>
+         
+    </div>
+    <div class="col-md-5">
+        <app-sjedista *ngFor="let sjedistaEl of listaSjedistaZaOdabranoVozilo" 
+        
+        [linija]="izabranaLinija"
+        [sjediste]="sjedistaEl"></app-sjedista>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<div class="clear"></div>

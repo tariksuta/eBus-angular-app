@@ -1,0 +1,20 @@
+<a style="cursor: pointer;" class="list-group-item clearfix "
+    [routerLink]="[index]"
+   routerLinkActive="active"
+     >
+     
+    <div class="float-left">
+        <label>Rezervacija kreirana:</label>
+        <h4 class="list-group-item-heading">{{rezervacija?.datumKreiranja | date}}</h4>
+        <label>Broj karte:</label>
+        <p class="list-group-item-text">{{rezervacija?.karta.brojKarte}}</p>
+        
+    </div>
+    <div class="float-right">
+        <label>Rezervacija vazi do:</label>
+        <h4>{{rezervacija?.datumIsteka | date}}</h4>
+        <label>Otkazana:</label>
+        <input type="checkbox" [(ngModel)]="rezervacija.otkazana">
+     </div>
+    
+</a>

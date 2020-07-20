@@ -1,0 +1,6 @@
+<div class="sjediste">
+    <button class="urediDugme" [disabled]="potvrda"
+     (click)="rezervisiKartu()" 
+     [ngStyle]="{'background-color' : !potvrda ?  'green' : 'red' }">{{sjediste.red}}- {{sjediste.kolona}}</button>
+    
+</div>

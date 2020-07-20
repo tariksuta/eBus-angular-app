@@ -1,0 +1,21 @@
+.sjediste{
+    width: calc(25% - 30px);
+    height: 100px;
+    background-color: silver;
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+   
+}
+
+.urediDugme{
+
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    border-style: none;
+    border-radius: 10px;
+    color: white;
+}

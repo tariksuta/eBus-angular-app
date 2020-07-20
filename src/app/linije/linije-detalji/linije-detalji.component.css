@@ -1,0 +1,51 @@
+.urediTekst{
+    color: red;
+    font-weight: 500;
+}
+.kockaX{
+    margin-right: 50px;
+  
+    position: fixed;
+    right : 0;
+    color: white;
+    
+}
+
+.slobodno{
+    width: 100px;
+    height: 20px;
+    background-color: green;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    position: fixed;
+    z-index: -10;
+
+}
+
+.clear{
+    clear: both;
+ 
+}
+
+.zauzeto{
+    width: 100px;
+    height: 20px;
+    background-color: red;
+    text-align: center;
+    color: white;
+    position: fixed;
+    z-index: -10;
+   
+
+
+}
+
+.razmak{
+    border-top: 2px solid rgb(54, 53, 129);
+    
+    padding-top: 10px;
+}
+
+
+

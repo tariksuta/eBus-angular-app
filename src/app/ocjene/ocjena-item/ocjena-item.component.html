@@ -1,0 +1,26 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ kompanija.naziv}}</mat-card-title>
+      <mat-card-subtitle>{{kompanija.adresa}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ kompanija.lokacijaSlike }}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <div class="uporedoBox">
+            <p class="urediP">Kontakt broja :</p>
+            <p class="urediP">{{kompanija.kontaktBroj}}</p>
+        </div>
+      <div class="uporedoBox">
+          <p class="urediP">Email :</p>
+        <p class="urediP">{{kompanija.email}}</p>
+      </div>
+      
+      
+    </mat-card-content>
+    <mat-card-actions>
+        <p  class="urediP">Ocjeni usluge prevoza</p>
+        <mat-slider min="1" max="5" step="1" [(ngModel)]="ocjena" class="slider"></mat-slider>
+        <p class="urediP">{{ocjena}}</p>
+        <button class="btn btn-success float-right" (click)="ocjeniKompaniju()">OK</button>
+    </mat-card-actions>
+  </mat-card>
