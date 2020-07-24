@@ -1,0 +1,29 @@
+
+   
+    <mat-grid-list cols="3" rowHeight="6:1">
+        <mat-grid-tile>
+           <span>Polazište :</span>
+            {{preporuka.polazisteNaziv}}
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <span>Odredište : </span>
+            {{preporuka.odredisteNaziv}}
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <span>Kompanija : </span>
+            {{preporuka.kompanija}}
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <span>Cijena : </span>
+            {{preporuka.cijena}} KM
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <span>Datum  : </span>
+            {{preporuka.datumPretrage | date}} 
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <span>Vrijeme polaska : </span>
+            {{preporuka.vrijemePolaska }} 
+        </mat-grid-tile>
+      </mat-grid-list>
+

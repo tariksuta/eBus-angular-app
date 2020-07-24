@@ -91,7 +91,7 @@ export class SjedistaComponent implements OnInit  {
       
        
         
-        if(rezervacija.kartaId == karta.id && this.sjediste.id == karta.sjedisteId && !rezervacija.otkazana && datum1.getDate() == datum2.getDate() ){
+        if(rezervacija.kartaId == karta.id && this.sjediste.id == karta.sjedisteId && !rezervacija.otkazana && datum1.toLocaleDateString() == datum2.toLocaleDateString() ){
             this.potvrda = true;
             return;
         }
@@ -119,6 +119,7 @@ export class SjedistaComponent implements OnInit  {
           }
         );
 
+          alert("Uspješno ste kreirali rezervaciju");
         return;
       }
     });

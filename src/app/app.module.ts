@@ -19,6 +19,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { QRCodeModule } from 'angularx-qrcode';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -34,6 +35,8 @@ import { RezervacijeItemComponent } from './rezervacije/rezervacije-item/rezerva
 import { RezervacijeDetaljiComponent } from './rezervacije/rezervacije-detalji/rezervacije-detalji.component';
 import { ProfilComponent } from './profil/profil.component';
 import { RezervacijeStartComponent } from './rezervacije/rezervacije-start/rezervacije-start.component';
+import { PreporukeComponent } from './preporuke/preporuke.component';
+import { PreporukeItemComponent } from './preporuke/preporuke-item/preporuke-item.component';
 
 const appRoutes : Routes = [
   {path:'', redirectTo: '/notifikacije',pathMatch :'full'},
@@ -76,6 +79,8 @@ const appRoutes : Routes = [
     RezervacijeDetaljiComponent,
     ProfilComponent,
     RezervacijeStartComponent,
+    PreporukeComponent,
+    PreporukeItemComponent,
  
   ],
   imports: [
@@ -90,6 +95,7 @@ const appRoutes : Routes = [
     MatSliderModule,
     MatProgressBarModule,
     QRCodeModule,
+    MatGridListModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [NotfikacijeService,

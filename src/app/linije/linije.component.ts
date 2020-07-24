@@ -122,27 +122,7 @@ export class LinijeComponent implements OnInit {
     this.nazivPolazista = naziv;
   }
 
-  onKeyOdrediste(event : any){
-    if(event.target.value != ''){
-      this.poOdredistu = true;
 
-      this.pretraziGradove(event.target.value);
-      
-    }else{
-      this.poOdredistu = false;
-    }
-  }
-
-  onKeyPolaziste(event : any){
-    if(event.target.value != ''){
-      this.poPolazistu = true;
-
-      this.pretraziGradove(event.target.value);
-      
-    }else{
-      this.poPolazistu = false;
-    }
-  }
 
   zamjeniGradove(){
 

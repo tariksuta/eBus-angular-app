@@ -14,5 +14,45 @@
 </head>
 <body class="mat-typography">
   <app-root></app-root>
+
+  <script>
+    function prikaziPolazista() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("polaziste");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("polazisteUL");
+    ul.style.display = "block";
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+function prikaziOdredista() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("odrediste");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("odredisteUL");
+    ul.style.display = "block";
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+
+</script>
 </body>
 </html>

@@ -10,6 +10,10 @@ import { OcjenaUpsert } from '../shared/Requests/ocjenaupsert.model';
 export class OcjenaService{
     constructor(private http : HttpClient){}
 
+    private listaOcjena : Ocjena[]=[];
+
+  
+
     getOcjene(): Observable<Ocjena[]>{
         return this.http.get<Ocjena[]>(`${environment.apiUrl}/Ocjena`);
 

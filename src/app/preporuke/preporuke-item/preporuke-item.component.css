@@ -1,0 +1,15 @@
+mat-grid-tile{
+    background-color: lightblue;
+
+    
+}
+ span{
+    padding-right: 10px;
+    color: red;
+    text-transform: uppercase;
+    
+}
+mat-grid-list {
+    margin-bottom: 5px;
+  
+}
